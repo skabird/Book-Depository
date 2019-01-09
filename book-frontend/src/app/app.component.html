@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ pageTitle }}
+  </h1>
+</div>
+
+
+<label>
+  Author:
+  <input type="text" [formControl]="author">
+</label>
+
+<label>
+  Title:
+  <input type="text" [formControl]="title">
+</label>
+
+<button (click)="addBook(author.value, title.value)" mat-raised-button color="primary">Add</button>
+
+
+<ul *ngFor="let book of data">
+<mat-card class="book-card">
+  <div mat-card-content class="book-id">{{book.id}}</div>
+  <br/>
+  <mat-divider [vertical]="true"></mat-divider>
+  <br/>
+  <div mat-card-content class="book-title">{{book.title}}</div>
+  <mat-divider [vertical]="true"></mat-divider>
+  <div mat-card-content class="book-author">{{book.author}}</div>
+  <img mat-card-image class ="book-image" src= "https://d1nz104zbf64va.cloudfront.net/dt/a/o/top-7-books-that-changed-the-world.jpg">
+</mat-card>
+</ul>
+
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,28 @@
+.book-card {
+    max-height: 50px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-id{
+    width: 10% ;
+    font-weight: bold;
+}
+
+.book-title{
+    width: 35%
+}
+
+.book-author{
+    width: 35%
+}
+
+.book-image{
+    width: 15%
+}
